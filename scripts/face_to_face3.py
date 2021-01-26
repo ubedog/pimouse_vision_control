@@ -6,7 +6,8 @@ from cv_bridge import CvBridge, CvBridgeError
 
 class FaceToFace():
     def __init__(self):
-        sub = rospy.Subscriber("/cv_camera/image_raw", Image, self.get_image)        self.pub = rospy.Publisher("face", Image, queue_size=1)
+        sub = rospy.Subscriber("/cv_camera/image_raw", Image, self.get_image)
+        self.pub = rospy.Publisher("face", Image, queue_size=1)
         self.bridge = CvBridge()
         self.image_org = None
 
