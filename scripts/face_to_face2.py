@@ -19,7 +19,7 @@ class FaceToFace():
     def detect_face(self):
         if self.image_org is None:
             return None
-   
+    
         org = self.image_org
     
         gimg = cv2.cvtColor(org,cv2.COLOR_BGR2GRAY)
@@ -43,4 +43,3 @@ if __name__ == '__main__':
     while not rospy.is_shutdown():
         rospy.loginfo(fd.detect_face())
         rate.sleep()
-
