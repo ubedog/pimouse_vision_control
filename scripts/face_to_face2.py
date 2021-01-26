@@ -12,7 +12,7 @@ class FaceToFace():
 
     def get_image(self,img):
         try:
-            self.image_org = self.bridge.image_to_cv2(img, "bgr8")
+            self.image_org = self.bridge.imgmsg_to_cv2(img, "bgr8")
         except CvBridgeError as e:
             rospy.logerr(e)
 
