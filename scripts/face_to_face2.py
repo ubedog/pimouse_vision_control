@@ -23,7 +23,7 @@ class FaceToFace():
         org = self.image_org
     
         gimg = cv2.cvtColor(org,cv2.COLOR_BGR2GRAY)
-        classifier = "/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml"
+        classifier = "/opt/ros/kinetic/lib/python2.7/dist-package/opencv/data/haacascades/haarcascade_frontalface_default.xml"
         cascade = cv2.CascadeClassifier(classifier)
         face = cascade.detectMultiScale(gimg,1.1,1,cv2.CASCADE_FIND_BIGGEST_OBJECT)
     
